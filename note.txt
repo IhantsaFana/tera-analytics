@@ -1,0 +1,11 @@
+Python :
+
+Arguments multiples (*args)
+Arguments nommés(**kwargs)
+Fonctions lambda (courtes)
+Création de module
+NumPy: calcul scientifique
+Tensorflow
+
+matplotlib
+seaborn
