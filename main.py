@@ -52,7 +52,12 @@ def run_pipeline(mode="show"):
     print(f"\n5. Dashboard ({mode})...")
     chemin_dashboard = graphique_dashboard(df, stats, moyenne_jour, mode)
     if mode == "export" and chemin_dashboard is not None:
-        print(f"   → {chemin_dashboard}")
+        # graphique_dashboard peut maintenant retourner une liste de chemins
+        if isinstance(chemin_dashboard, (list, tuple)):
+            for p in chemin_dashboard:
+                print(f"   → {p}")
+        else:
+            print(f"   → {chemin_dashboard}")
 
     print("\nTerminé.")
 
